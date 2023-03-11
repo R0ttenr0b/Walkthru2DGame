@@ -11,3 +11,15 @@ map = [
     [1, 1, 1, 1, 1]
     [1, 1, 1, 1, 1]
 ]
+#images
+images =[]
+for i in range(32):
+
+#move function
+def move(direction):
+    global pla_pos
+
+    new_pos = pla_pos.copy()
+    if direction == "left":
+        new_pos [1] =- 1
+
