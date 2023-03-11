@@ -28,3 +28,8 @@ def move(direction):
         new_pos [1] =- 1
     if direction == "left":
         new_pos [1] =- 1
+
+#get the user to move
+direction = input("move (left,up, right, down);")
+
+move(direction)
