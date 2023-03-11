@@ -22,4 +22,9 @@ def move(direction):
     new_pos = pla_pos.copy()
     if direction == "left":
         new_pos [1] =- 1
-
+    if direction == "left":
+        new_pos [1] =- 1
+    if direction == "left":
+        new_pos [1] =- 1
+    if direction == "left":
+        new_pos [1] =- 1
