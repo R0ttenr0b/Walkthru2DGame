@@ -19,9 +19,9 @@ for i in range(32):
 
 #move function
 def move(direction):
-    global pla_x pla_y
+    global pla_x,pla_y
 
-    new_pos = pla_pos.copy()
+    new_pos = pla_dir.copy()
     if direction == "left":
         new_pos [1] =- 1
     if direction == "left":
