@@ -39,3 +39,4 @@ move(direction)
 
 while True:
  print("Player position:",pla_y,pla_x)
+ 
