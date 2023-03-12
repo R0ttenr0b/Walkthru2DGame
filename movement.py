@@ -1,3 +1,5 @@
+import os
+
 pla_x = 1
 pla_y = 1
 pla_dir = 'up'
