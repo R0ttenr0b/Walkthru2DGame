@@ -24,11 +24,11 @@ def move(direction):
     new_pos = pla_dir.copy()
     if direction == "left":
         new_pos [1] =- 1
-    if direction == "left":
+    if direction == "right":
         new_pos [1] =- 1
-    if direction == "left":
+    if direction == "up":
         new_pos [1] =- 1
-    if direction == "left":
+    if direction == "down":
         new_pos [1] =- 1
 
 #get the user to move
