@@ -25,7 +25,7 @@ def move(direction):
     if direction == "left":
         new_pos [1] =- 1
     if direction == "right":
-        new_pos [1] =- 1
+        new_pos [1] =+ 1
     if direction == "up":
         new_pos [1] =- 1
     if direction == "down":
