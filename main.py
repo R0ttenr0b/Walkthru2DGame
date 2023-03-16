@@ -16,7 +16,7 @@ map = [
 play_pos = [0,0]   
 
 #images
-with open("images.json","r")as f:
+with open("2dpics.json","r")as f:
     images_data = json.load(f)
     images = images_data["images"]
 
