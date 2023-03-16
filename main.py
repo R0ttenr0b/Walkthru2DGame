@@ -16,8 +16,8 @@ map = [
 play_pos = [0,0]   
 
 #images
-with open("images.json")
-    images_data = json,load()
+with open("images.json","r")as f:
+    images_data = json.load(f)
     images = images_data["images"]
 
 #move function
