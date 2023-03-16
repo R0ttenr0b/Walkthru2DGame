@@ -10,7 +10,7 @@ map = [
     [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
     [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
     [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
-    [(3,0), (0, 0), (0, 0), (0, 0), (0, 4)],
+    [(3,0), (0, 0), (0, 0), (0, 0), (0, 4)], ]
  
 # where the player is starting 
 play_pos = [0,0]   
@@ -24,22 +24,17 @@ with open("images.json")
 def move(direction):
     global play_pos
 
-    new_pos = pla_dir.copy()
+    new_pos = play_pos.copy()
     if direction == "left":
         new_pos [1] =- 1
-    if direction == "right":
+    elif direction == "right":
         new_pos [1] =+ 1
-    if direction == "up":
-        new_pos [1] =- 1
-    if direction == "down":
-        new_pos [1] =- 1
+    elif direction == "up":
+        new_pos [0] =- 1
+    elif direction == "down":
+        new_pos [0] =+ 1
 
 #get the user to move
-direction = input("move (left,up, right, down);")
+direction = input("move (left,up, right, down):")
 
 move(direction)
-
-
-while True:
- print("Player position:",pla_y,pla_x)
- 
