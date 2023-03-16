@@ -1,17 +1,16 @@
 import os
+import json
 
-pla_x = 1
-pla_y = 1
-pla_dir = 'up'
 # where the player is starting 
+play_pos = [0,0]
 
 #making a 5x5 map
 map = [
-    [1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1]
+    [(1,0), 1, 1, 1, 1],
+    [(0,0), 1, 1, 1],
+    [(0,0), 1, 1, 1],
+    [(0,0), 1, 1, 1],
+    [(3,0), 1, 1, 1]
 ]
 #images
 images =[]
