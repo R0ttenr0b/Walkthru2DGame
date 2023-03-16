@@ -6,19 +6,23 @@ play_pos = [0,0]
 
 #making a 5x5 map
 map = [
-    [(1,0), 1, 1, 1, 1],
-    [(0,0), 1, 1, 1],
-    [(0,0), 1, 1, 1],
-    [(0,0), 1, 1, 1],
-    [(3,0), 1, 1, 1]
-]
+    [(1,0), (0, 0), (0, 0), (0, 0), (0, 2)],
+    [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
+    [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
+    [(0,0), (0, 0), (0, 0), (0, 0), (0, 0)],
+    [(3,0), (0, 0), (0, 0), (0, 0), (0, 4)],
+ 
+# where the player is starting 
+play_pos = [0,0]   
+
 #images
-images =[]
-for i in range(32):
+with open("images.json")
+    images_data = json,load()
+    images = images_data["images"]
 
 #move function
 def move(direction):
-    global pla_x,pla_y
+    global play_pos
 
     new_pos = pla_dir.copy()
     if direction == "left":
