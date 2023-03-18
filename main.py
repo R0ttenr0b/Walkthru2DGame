@@ -41,3 +41,27 @@ def move(direction):
 
 #get the user to move
 direction = input("move (left,up, right, down):")
+
+move(direction)
+# display game map with player position
+for i, row in enumerate(map):
+    for j, tile in enumerate(row):
+        if (i, j) == tuple(play_pos):
+            # display player image
+            print(images['player'], end=' ')
+        elif tile == (0, 0):
+            # display empty tile image
+            print(images['empty'], end=' ')
+        elif tile == (1, 0):
+            # display left wall image
+            print(images['left_wall'], end=' ')
+        elif tile == (2, 0):
+            # display right wall image
+            print(images['right_wall'], end=' ')
+        elif tile == (3, 0):
+            # display top wall image
+            print(images['top_wall'], end=' ')
+        elif tile == (4, 0):
+            # display bottom wall image
+            print(images['bottom_wall'], end=' ')
+    print()
