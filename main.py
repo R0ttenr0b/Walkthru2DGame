@@ -1,8 +1,6 @@
 import os
 import json
 
-
-
 # where the player is starting 
 play_pos = [0,0]
 
