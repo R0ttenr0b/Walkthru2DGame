@@ -16,23 +16,17 @@ map = [
 play_pos = [0,0]   
 
 #images
-with open("2dpics.json","r")as f:
+with open("2dpicsM.json","r") as f:
     images_data = json.load(f)
-    images = images_data["images"]
+    images = images_data.get("images", [])
 
-#move function
-def move(direction):
-    global play_pos
+current_image_index = 0
 
-    new_pos = play_pos.copy()
-    if direction == "left":
-        new_pos [1] -= 1
-    elif direction == "right":
-        new_pos [1] += 1
-    elif direction == "up":
-        new_pos [0] -= 1
-    elif direction == "down":
-        new_pos [0] += 1
+def next_image_index(directiuon):
+    global current_image_index
+    current_image = image[play_pos[0]][play_pos[1]]
+    next_image_pos = current_image["next"].get(directiuon)
+    if next_image_pos is not None:
+        next_image = image[current_image]
 
-#get the user to move
-direction = input("move (left,up, right, down):")
+        
