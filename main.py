@@ -22,10 +22,10 @@ with open("2dpicsM.json","r") as f:
 
 current_image_index = 0
 
-def next_image_index(directiuon):
+def next_image_index(direction):
     global current_image_index
     current_image = images[play_pos[0]][play_pos[1]]
-    next_image_pos = current_image["next"].get(directiuon)
+    next_image_pos = current_image["next"].get(direction)
     if next_image_pos is not None:
         next_image = images[next_image_pos[0]][play_pos[1]]
         current_image_index = images.index(next_image)
@@ -44,7 +44,7 @@ while True:
     # get user input
     direction = input("move (left,up, right, down):")
     # get next image index based on user input
-    current_image_index = get_next_image_index(direction)
+    current_image_index = next_image_index(direction)
     # display current image
     display_image()
 
