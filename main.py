@@ -34,8 +34,8 @@ def next_image_index(directiuon):
 #display the images
 def display_image():
     current_image = images[current_image_index]
-     filename = current_image["filename"]
-  image_path = os.path.join("images", filename)
+    filename = current_image["filename"]
+    image_path = os.path.join("images", filename)
     # display image here
     print("Displaying image:", image_path)
 
