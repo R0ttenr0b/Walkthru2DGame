@@ -1,9 +1,6 @@
 import os
 import json
 
-# where the player is starting 
-play_pos = [0,0]
-
 #making a 5x5 map
 map = [
     [(1,0), (0, 0), (0, 0), (0, 0), (0, 2)],
@@ -16,7 +13,7 @@ map = [
 play_pos = [0,0]   
 
 #images
-with open("2dpicsM.json","r") as f:
+with open("2dpics.json","r") as f:
     images_data = json.load(f)
     images = images_data.get("images", [])
 
