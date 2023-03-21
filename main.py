@@ -20,20 +20,22 @@ with open("2dpicsM.json","r") as f:
     images_data = json.load(f)
     images = images_data.get("images", [])
 
-current_image_index = 0
+current_image_index = images.index(images[play_pos[0]][play_pos[1]])
 
 def next_image_index(direction):
     global current_image_index
+    global play_pos
     current_image = images[play_pos[0]][play_pos[1]]
     next_image_pos = current_image["next"].get(direction)
     if next_image_pos is not None:
         next_image = images[next_image_pos[0]][play_pos[1]]
         current_image_index = images.index(next_image)
+        play_pos = next_image_pos
         return current_image_index
     
 #display the images
 def display_image():
-    current_image = images[current_image_index]
+    current_image = images[play_pos[0]][play_pos[1]]
     filename = current_image["filename"]
     image_path = os.path.join("images", filename)
     # display image here
